@@ -1,5 +1,5 @@
 /* https://github.com/DiemenDesign/summernote-a11y */
-(function(factory) {
+(function (factory) {
   if(typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
   } else if (typeof module === 'object' && module.exports) {
@@ -8,7 +8,7 @@
     factory(window.jQuery);
   }
 }
-(function($) {
+(function ($) {
   $.extend(true,$.summernote.lang, {
     'en-US': {
       a11y: {
@@ -23,23 +23,20 @@
     }
   });
   $.extend($.summernote.plugins, {
-    'a11y':function(context) {
-      var self = this;
-      var ui = $.summernote.ui;
-      var $note = context.layoutInfo.note;
-      var $editor = context.layoutInfo.editor;
-      var options = context.options;
-      var lang = options.langInfo;
+    'a11y': function(context) {
+      var ui      = $.summernote.ui,
+          options = context.options,
+          lang    = options.langInfo;
       $('<link/>', {
         rel: 'stylesheet',
         type: 'text/css',
         href: options.a11y.langFile
       }).appendTo('head');
-      context.memo('button.a11y',function() {
+      context.memo('button.a11y', function () {
         var button = ui.button({
           contents: options.a11y.icon,
-          tooltip: lang.a11y.tooltip,
-          click:function() {
+          tooltip:  lang.a11y.tooltip,
+          click: function () {
             $('[data-original-title="Accessibility Checker"]').toggleClass('btn-success');
             $('body,.note-editable,.note-toolbar-wrapper').toggleClass('a11y');
           }

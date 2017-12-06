@@ -1,5 +1,5 @@
 # summernote-a11y
-Unobtrusive Accessibility Checker Plugin for Summernote WYSIWYG the uses CSS
+Unobtrusive Accessibility Checker Plugin for Summernote WYSIWYG that uses CSS
 
 This Plugin uses a modified version of the CSS rules from [a11y.css](https://github.com/ffoodd/a11y.css) to check the Accessibility of the content in the Summernote Editor Area.
 
