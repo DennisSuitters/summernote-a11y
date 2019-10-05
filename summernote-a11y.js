@@ -35,6 +35,7 @@
       context.memo('button.a11y', function () {
         var button = ui.button({
           contents: options.a11y.icon,
+          container: 'body',
           tooltip:  lang.a11y.tooltip,
           click: function () {
             $('[data-original-title="Accessibility Checker"]').toggleClass('btn-success');
